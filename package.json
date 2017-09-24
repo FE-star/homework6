@@ -1,0 +1,27 @@
+{
+  "name": "homework6",
+  "version": "0.0.1",
+  "description": "homework",
+  "main": "dist/bundle.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "webpack && mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FE-star/homework6.git"
+  },
+  "author": "Daniel Yang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FE-star/homework6/issues"
+  },
+  "homepage": "https://github.com/FE-star/homework6#readme",
+  "devDependencies": {
+    "mocha": "^3.5.3",
+    "webpack": "^3.6.0",
+    "webpack-sources": "^1.0.1"
+  }
+}
