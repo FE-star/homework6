@@ -5,11 +5,6 @@ class DefPlugin {
   }
 
   apply(compiler) {
-    compiler.plugin('compilation', function(compilation, params) {
-      compilation.templatesPlugin('render-with-entry', function (source) {
-        return new ConcatSource(`define(['require', 'module'], function(require, module) { `, source, '})')
-      })
-    })
   }
 }
 
