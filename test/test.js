@@ -11,9 +11,11 @@ describe('plugin', function () {
         if (key === 'exports') return module.exports
       })
       fn.apply(null, args)
+      console.info(module);
+      console.log("UUUUUUUUU"+module);
       mod = module
     }
-  })
+  });
 
   it('可以不使用 Object.definePropery 中的 get 参数', function () {
     const a = require('../dist/bundle')
