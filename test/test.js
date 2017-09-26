@@ -11,8 +11,6 @@ describe('plugin', function () {
         if (key === 'exports') return module.exports
       })
       fn.apply(null, args)
-      console.info(module);
-      console.log("UUUUUUUUU"+module);
       mod = module
     }
   });
