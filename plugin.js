@@ -5,7 +5,6 @@ class DefPlugin {
     constructor(name) {}
 
     apply(compiler) {
-
         compiler.plugin("emit", function(compilation, callback) {
 
             var source = ""; 
