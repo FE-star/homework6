@@ -15,8 +15,6 @@ class DefPlugin {
                  }
             }) 
             
-            console.log(source);
-
             var targetSource = `global.define(['module', 'exports'], function(module, exports){
                                  ${source}
                             });
