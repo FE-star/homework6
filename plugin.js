@@ -1,7 +1,5 @@
 const ConcatSource = require('webpack-sources').ConcatSource
 
-console.log(ConcatSource);
-
 class DefPlugin {
     constructor(name) {}
 
