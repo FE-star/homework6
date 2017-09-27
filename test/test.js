@@ -17,6 +17,7 @@ describe('plugin', function () {
 
   it('可以不使用 Object.definePropery 中的 get 参数', function () {
     const a = require('../dist/bundle')
+    console.log(mod)
     assert.equal(mod.exports, 'hello world')
   })
 
