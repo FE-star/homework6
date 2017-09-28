@@ -13,3 +13,8 @@ module.exports = {
         new Plugin
     ]
 }
+
+// {
+//         home:'./index.js',
+//         user:'./index.js'
+//     },
