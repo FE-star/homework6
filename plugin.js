@@ -1,11 +1,19 @@
 const ConcatSource = require('webpack-sources').ConcatSource
 
 class DefPlugin {
-  constructor(name) {
-  }
 
-  apply(compiler) {
-  }
+    constructor(name) {
+        this.name = name;
+    }
+
+    apply(compiler) {
+        
+        compiler.plugin('compilation', function(compilation) {
+            compilation.templatesPlugin("render-with-entry", (source, chunk, hash) => {
+                 return new ConcatSource("define(['module', 'exports'],function(module, exports) { return ", source, "});");
+            });
+        });
+    }
 }
 
 module.exports = DefPlugin
