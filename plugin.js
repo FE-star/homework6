@@ -13,7 +13,7 @@ class DefPlugin {
   		  compilation.chunks.forEach(function(chunk) {
 
         chunk.modules.forEach(function(module) {
-
+        	//想通过判断replacements是否有内容，判断是不是没有依赖其他文件，只给依赖文件加上global.define，借助webpack处理依赖关系
         	if(!module._cachedSource.source.replacements.length){
         		module._source._value = `
 				   global.define(['module','exports'],function (module,exports){
