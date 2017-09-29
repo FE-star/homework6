@@ -14,7 +14,3 @@ module.exports = {
     ]
 }
 
-// {
-//         home:'./index.js',
-//         user:'./index.js'
-//     },
