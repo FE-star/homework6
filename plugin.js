@@ -2,7 +2,6 @@ const ConcatSource = require('webpack-sources').ConcatSource
 let result = new ConcatSource();
 class DefPlugin {
   constructor(name) {
-
   }
 
   apply(compiler) {
