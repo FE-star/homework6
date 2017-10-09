@@ -2,3 +2,5 @@ node_modules
 .plugin.js
 dist
 package-lock.json
+launch.json
+webpack.config.js
