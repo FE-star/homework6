@@ -6,3 +6,4 @@
 ## 参考
 - [plugin API](https://doc.webpack-china.org/api/plugins)
 - [如何写一个webpack插件](http://hao.jser.com/archive/16469/)
+- [webpack-source](https://github.com/webpack/webpack-sources)
