@@ -7,9 +7,7 @@ class DefPlugin {
         compiler.plugin('emit', function(compilation, callback) {
             let assets = compilation.assets
             for (let key in compilation.assets) {
-                console.log(key);
-                let str = assets[key].source();
-                str = `global.define(['require', 'module', 'exports'], ( require, module, exports) => {${str}})`
+                let str = `global.define(['require', 'module', 'exports'], ( require, module, exports) => {${assets[key].source()}})`
                 assets[key] = new ConcatSource(str);
             }
             callback();
