@@ -5,6 +5,7 @@ module.exports = {
     context: path.join(__dirname, 'src'),
     entry: './index.js',
     output: {
+        // bundle以module.exports导出整个bundle模块 node环境
         libraryTarget: 'commonjs2',
         path: path.join(__dirname, 'dist'),
         filename: './bundle.js'
