@@ -7,17 +7,15 @@ class DefPlugin {
   }
 
   apply(compiler) {
-    // 完成所有模块构建结束编译过程点
-    compiler.plugin('after-compile', function (compilation, callback) {
-      // console.log(compilation.mainTemplate)
-      const assets = compilation.assets
-      for (let key in assets) {
-        let str = `global.define(['require', 'module', 'exports'], function ( require, module, exports) {${assets[key].source()}})`
-        assets[key] = new ConcatSource(str)
-      }
 
-      callback()
+    compiler.plugin('compilation', function (compilation) {
+    
+      compilation.templatesPlugin("render-with-entry", (source, chunk, hash) => {
+        return new ConcatSource("define(['module', 'exports'], function(module, exports) { return ", source, "});")
+      })
+
     })
+    
   }
 }
 
