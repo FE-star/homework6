@@ -20,19 +20,12 @@ class DefPlugin {
 			// 	});
 			// 	callback();
       // });
-      
-      const mainTemplate = compilation.mainTemplate;
 
       compilation.templatesPlugin("render-with-entry", (source, chunk, hash) => {
         // console.log(source);
 
         if(this.name) {
-          const name = mainTemplate.applyPluginsWaterfall("asset-path", this.name, {
-            hash,
-            chunk
-          });
-
-          return new ConcatSource(`global.define([${JSON.stringify(name)}, 'module'], function(module) { `, source, "});");
+          return new ConcatSource(`global.define([${JSON.stringify(this.name)}, 'module'], function(${this.name}, module) { `, source, "});");
         } else {
           return new ConcatSource(`global.define(['module'], function(module) { `, source, "});");
         }
