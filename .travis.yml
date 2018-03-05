@@ -1,5 +1,9 @@
 language: node_js
 node_js:
-  - "6"
+  - "8.9.1"
 before_install:
   npm install webpack -g
+install:
+  npm install
+script:
+  - npm test
