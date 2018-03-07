@@ -16,7 +16,10 @@ describe('plugin', function () {
   })
 
   it('可以不使用 Object.definePropery 中的 get 参数', function () {
-    const a = require('../dist/bundle')
+    require('../dist/bundle')
+    // define(['module', 'exports'],function(module, exports) {
+    //   return module.exports = 'hello world'
+    // });
     assert.equal(mod.exports, 'hello world')
   })
 
