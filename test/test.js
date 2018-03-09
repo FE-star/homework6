@@ -10,6 +10,7 @@ describe('plugin', function () {
         if (key === 'module') return module
         if (key === 'exports') return module.exports
       })
+      console.log(args)
       fn.apply(null, args)
       mod = module
     }
