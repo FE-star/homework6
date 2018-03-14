@@ -5,6 +5,13 @@ class DefPlugin {
   }
 
   apply(compiler) {
+  	 compiler.plugin('compilation',function(compilation){
+  	 	compilation.mainTemplate.plugin('render-with-entry', function(source){
+  	 		return new ConcatSource(`global.define(['require','module','exports'],function(require,module,exports){
+  	 			 ${source.source()}
+  	 		})`)
+  	 	})
+  	 })
   }
 }
 
