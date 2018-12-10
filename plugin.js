@@ -10,7 +10,7 @@ class DefPlugin {
         chunks.forEach((chunk) => {
           chunk.files.forEach((file) =>
             compilation.assets[file] = new ConcatSource(
-              "global.define(['require','module','exports'],function(require, module, exports) {\n", 
+              "define(['require','module','exports'],function(require, module, exports) {\n", 
               compilation.assets[file],
               "\n})", 
             )
