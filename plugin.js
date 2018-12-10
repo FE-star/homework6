@@ -12,7 +12,7 @@ class DefPlugin {
             compilation.assets[file] = new ConcatSource(
               "define(['require','module','exports'],function(require, module, exports) {\n", 
               compilation.assets[file],
-              "\n})", 
+              "\n})"
             )
           )
           callback();
